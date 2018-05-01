@@ -1,0 +1,27 @@
+Deleting (Remove) from a BST 
+	-Running time O(h)
+
+1. Determine withether the node is in the tree. Something like contains()
+2. No child => Node can be removed outright 
+3. One Child => Node is replaced with its child node
+4. Two Children => Find the minimum node in the right sub tree and replace the node with that min node in order to maintain the BST property
+
+Tree Traversal 
+
+1.Depth-First Traversal
+	-Pre-Order: Process = root, left subtree, right subtree
+	-In-Order: Left Subtree, root right subtree
+	-Post-Order Left, right, root 
+2. Breadth-First Traversal
+	-Level-Order 
+
+print_tree(t)
+	if t == None: 
+		return t
+
+	if t.left != None:
+		print_tree(t.left)
+	print(t.value)
+
+	if t.right != None: 
+		print(t.right)
